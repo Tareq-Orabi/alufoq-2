@@ -1,4 +1,4 @@
-import type { NewsItem, SchoolEvent, NewsArticle } from '../Types/interface';
+import type { NewsItem, SchoolEvent, NewsArticle } from '../types/interface';
 
 export type { NewsItem, SchoolEvent, NewsArticle };
 

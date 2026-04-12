@@ -1,45 +1,45 @@
 import React, { useState } from 'react';
-import { Navbar } from './Components/navBar';
-import { Home } from './Sections/home';
-import { About } from './Sections/about';
-import { News } from './Sections/news';
-import { Events } from './Sections/events';
-import { Footer } from './Components/footer';
+import { Navbar } from './components/navBar';
+import { Home } from './pages/Home';
+import { About } from './sections/about';
+import { News } from './sections/news';
+import { Events } from './sections/events';
+import { Footer } from './components/footer';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useLanguage } from './Context/LanguageContext';
+import { useLanguage } from './hooks/useLanguage';
+
+type Page = 'home' | 'about' | 'news' | 'events';
 
 /**
- * PageWrapper handles the entrance and exit animations for each "tab"
+ * PageWrapper — entrance/exit animation shell for each route.
  */
 const PageWrapper = ({ children }: { children: React.ReactNode }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     exit={{ opacity: 0, y: -20 }}
-    transition={{
-      duration: 0.4,
-      ease: [0.22, 1, 0.36, 1]
-    }}
+    transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
   >
     {children}
   </motion.div>
 );
 
 function App() {
-  const [currentPage, setCurrentPage] = useState<'home' | 'about' | 'news' | 'events'>('home');
+  const [currentPage, setCurrentPage] = useState<Page>('home');
+  // About/News/Events still use the old lang-prop pattern (out of scope for this refactor).
+  // We read from context here and pass it down so they remain reactive to language changes.
   const { lang } = useLanguage();
 
   return (
     <div className="min-h-screen flex flex-col bg-white selection:bg-school-red selection:text-white">
-
-      {/* Navbar handles navigation and language toggling internally via context */}
+      {/* Navbar reads lang from context internally */}
       <Navbar setCurrentPage={setCurrentPage} currentPage={currentPage} />
 
       <main className="flex-grow">
         <AnimatePresence mode="wait">
           {currentPage === 'home' && (
             <PageWrapper key="home">
-              <Home lang={lang} />
+              <Home />
             </PageWrapper>
           )}
 
@@ -63,7 +63,7 @@ function App() {
         </AnimatePresence>
       </main>
 
-      <Footer lang={lang} />
+      <Footer />
     </div>
   );
 }
