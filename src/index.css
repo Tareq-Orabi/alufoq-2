@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@1,600;1,700&family=Inter:wght@400;500;700;900&display=swap');
+
+:root {
+  font-family: 'Inter', sans-serif;
+}
+
+@theme {
+  --color-school-red: #990000;
+  --color-school-gold: #FFD700;
+  --color-school-black: #000000;
+  --color-school-white: #FFFFFF;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 antialiased;
+  margin: 0;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+@keyframes drift {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(40px, 40px);
+  }
+
+  /* Match the pattern width/height */
+}
+
+.animate-drift {
+  animation: drift 3s linear infinite;
+}
