@@ -31,10 +31,6 @@ export const en: Translations = {
     title: 'Comprehensive Education',
     tags: ['School (Grades 1-12)', 'Kindergarten (Ages 4-6)', 'BTEC Programs'],
     desc: 'The school offers a complete educational pathway from Kindergarten through secondary levels. We cater to both boys and girls in a dynamic environment.',
-    projects: [
-      { title: 'New Exterior Design of Our School', progress: '50%', target: '$12,000' },
-      { title: 'Setup New Football Stadium', progress: '13%', target: '$33,000' },
-    ],
   },
   calendar: {
     title: 'Academic Calendar',

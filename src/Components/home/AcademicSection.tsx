@@ -1,7 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../../hooks/useLanguage';
 import { translations } from '../../locales';
-import ProjectCard from '../shared/ProjectCard';
 import CalendarSection from './CalendarSection';
 
 /**
@@ -48,19 +47,6 @@ const AcademicSection: React.FC = () => {
               {t.academic.desc}
             </p>
 
-            {/* Project fundraising cards */}
-            <div className="grid md:grid-cols-2 gap-8">
-              {t.academic.projects.map((project, i) => (
-                <ProjectCard
-                  key={i}
-                  title={project.title}
-                  progress={project.progress}
-                  target={project.target}
-                  donated={t.shared.donated}
-                  of={t.shared.of}
-                />
-              ))}
-            </div>
           </div>
         </div>
 

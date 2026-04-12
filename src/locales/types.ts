@@ -31,11 +31,6 @@ export interface Translations {
     title: string;
     tags: string[];
     desc: string;
-    projects: Array<{
-      title: string;
-      progress: string;
-      target: string;
-    }>;
   };
   calendar: {
     title: string;
