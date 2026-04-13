@@ -1,5 +1,5 @@
 import React from 'react';
-import school from '../../assets/school.jpg';
+import image3 from '../../assets/image3.jpg';
 import { useLanguage } from '../../hooks/useLanguage';
 import { translations } from '../../locales';
 
@@ -21,8 +21,8 @@ const HeroSection: React.FC = () => {
       {/* Background campus image — positioned based on text direction */}
       <div className={`absolute inset-0 z-0 overflow-hidden ${isAr ? 'lg:right-1/3' : 'lg:left-1/3'}`}>
         <img
-          src={school}
-          alt="Al-Ufoq school campus"
+          src={image3}
+          alt="Al-Ofoq school campus"
           className="w-full h-full object-cover transform scale-105"
           loading="lazy"
         />
@@ -34,9 +34,8 @@ const HeroSection: React.FC = () => {
 
       <div className="relative z-20 max-w-7xl mx-auto px-6 py-12 lg:py-24 w-full">
         <div
-          className={`lg:max-w-[65%] bg-white/20 p-10 md:p-20 rounded-2xl rounded-tr-[80px] rounded-bl-[80px] ${
-            isAr ? 'border-r-4 border-school-red' : 'border-l-4 border-school-red'
-          } relative overflow-hidden`}
+          className={`lg:max-w-[65%] bg-white/20 p-10 md:p-20 rounded-2xl rounded-tr-[80px] rounded-bl-[80px] ${isAr ? 'border-r-4 border-school-red' : 'border-l-4 border-school-red'
+            } relative overflow-hidden`}
         >
           <div className="relative z-10">
             {/* Welcome badge */}

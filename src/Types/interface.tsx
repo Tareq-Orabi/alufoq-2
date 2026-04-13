@@ -19,8 +19,7 @@ export interface SchoolEvent {
     location: string;
     locationAr?: string;
     fullDateRange: string;
-    phone: string;
-    email: string;
+    image: string;
 }
 
 export interface NewsArticle {

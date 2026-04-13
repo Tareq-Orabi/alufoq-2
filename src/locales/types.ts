@@ -10,6 +10,7 @@ export interface Translations {
     about: string;
     events: string;
     news: string;
+    blog: string;
     langSwitch: string;
     getInTouch: string;
   };

@@ -10,6 +10,7 @@ export const en: Translations = {
     about: 'About',
     events: 'Events',
     news: 'News',
+    blog: 'Blog',
     langSwitch: 'العربية',
     getInTouch: 'Get in touch',
   },

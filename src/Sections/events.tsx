@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import type { SchoolEvent } from '../data/schoolData';
-import { EVENTS_DATA } from '../data/schoolData';
+import type { SchoolEvent } from '../Data/schoolData';
+import { EVENTS_DATA } from '../Data/schoolData';
 
 interface EventsProps {
     lang: 'en' | 'ar';
@@ -77,9 +77,10 @@ export const Events: React.FC<EventsProps> = ({ lang }) => {
                         <div className="grid gap-6">
                             {events.map((event) => (
                                 <div key={event.id} className="group bg-white border border-slate-100 p-6 rounded-3xl flex flex-col md:flex-row items-center gap-8 cursor-pointer hover:shadow-2xl transition-all">
-                                    <div onClick={() => setSelectedEvent(event)} className="bg-school-red text-white w-24 h-24 rounded-2xl flex flex-col items-center justify-center shrink-0 shadow-lg group-hover:scale-105 transition">
-                                        <span className="text-3xl font-black">{event.day}</span>
-                                        <span className="text-xs font-bold uppercase tracking-widest">{isRtl ? event.monthAr : event.month.substring(0, 3)}</span>
+                                    <div onClick={() => setSelectedEvent(event)} className="relative overflow-hidden text-white w-40 h-40 rounded-2xl flex flex-col items-center justify-center shrink-0 shadow-lg group-hover:scale-105 transition">
+                                        {event.image && <img src={event.image} className="absolute inset-0 w-full h-full object-cover mix-blend-multiply hover:scale-110 transition-all duration-500" alt="" />}
+                                        <span className="relative z-10 text-3xl font-black">{event.day}</span>
+                                        <span className="relative z-10 text-xs font-bold uppercase tracking-widest">{isRtl ? event.monthAr : event.month.substring(0, 3)}</span>
                                     </div>
                                     <div onClick={() => setSelectedEvent(event)} className="flex-grow text-center md:text-start">
                                         <h3 className="text-2xl font-bold text-slate-900 group-hover:text-school-red transition">{isRtl ? event.titleAr : event.title}</h3>

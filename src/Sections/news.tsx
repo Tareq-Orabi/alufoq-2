@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { NEWS_DATA } from '../data/schoolData';
+import { NEWS_DATA } from '../Data/schoolData';
 
 interface NewsProps {
     lang: 'en' | 'ar';
@@ -19,6 +19,11 @@ export const News: React.FC<NewsProps> = ({ lang }) => {
     const [formData, setFormData] = useState({
         title: '', titleAr: '', excerpt: '', excerptAr: '', image: '', date: '', dateAr: ''
     });
+
+    const [expandedItems, setExpandedItems] = useState<number[]>([]);
+    const toggleExpand = (id: number) => {
+        setExpandedItems(prev => prev.includes(id) ? prev.filter(i => i !== id) : [...prev, id]);
+    };
 
     const handleOpenModal = (item?: any) => {
         if (item) {
@@ -96,8 +101,8 @@ export const News: React.FC<NewsProps> = ({ lang }) => {
                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent" />
                             </div>
 
-                            <div className="p-10 flex flex-col flex-grow">
-                                <h3 className="text-2xl font-bold text-slate-900 mb-4 leading-tight group-hover:text-school-red transition-colors">
+                            <div className="p-10 flex flex-col flex-grow items-start text-start">
+                                <h3 className={`text-2xl font-bold text-slate-900 mb-4 leading-tight group-hover:text-school-red transition-colors ${expandedItems.includes(item.id) ? '' : 'line-clamp-2'} whitespace-pre-line`}>
                                     {isRtl ? item.titleAr : item.title}
                                 </h3>
                                 <p className="text-slate-500 text-sm leading-relaxed mb-8 line-clamp-2">
@@ -107,9 +112,9 @@ export const News: React.FC<NewsProps> = ({ lang }) => {
                                     <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">
                                         {isRtl ? item.dateAr : item.date}
                                     </span>
-                                    <span className="text-xs font-black uppercase text-slate-950 group-hover:translate-x-1 transition-transform">
-                                        {isRtl ? 'اقرأ المزيد ←' : 'Read More →'}
-                                    </span>
+                                    <button onClick={() => toggleExpand(item.id)} className="text-xs font-black uppercase text-slate-950 transition-colors hover:text-school-red cursor-pointer">
+                                        {expandedItems.includes(item.id) ? (isRtl ? 'عرض أقل' : 'Show Less') : (isRtl ? 'اقرأ المزيد ←' : 'Read More →')}
+                                    </button>
                                 </div>
                             </div>
                         </motion.article>

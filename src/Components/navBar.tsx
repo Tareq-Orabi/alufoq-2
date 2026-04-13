@@ -5,12 +5,12 @@ import { translations } from '../locales';
 import { IconGlobe, IconMenu, IconClose } from './shared/icons';
 
 interface NavbarProps {
-  setCurrentPage: (page: 'home' | 'about' | 'news' | 'events') => void;
+  setCurrentPage: (page: 'home' | 'about' | 'news' | 'events' | 'blog') => void;
   currentPage: string;
 }
 
-type NavPage = 'home' | 'about' | 'events' | 'news';
-const NAV_PAGES: NavPage[] = ['home', 'about', 'events', 'news'];
+type NavPage = 'home' | 'about' | 'events' | 'news' | 'blog';
+const NAV_PAGES: NavPage[] = ['home', 'about', 'events', 'news', 'blog'];
 
 /**
  * Navbar — reads lang from context, uses typed translations for labels.
@@ -30,6 +30,7 @@ export const Navbar: React.FC<NavbarProps> = ({ setCurrentPage, currentPage }) =
     about: t.nav.about,
     events: t.nav.events,
     news: t.nav.news,
+    blog: t.nav.blog,
   };
 
   const handleNavClick = (page: NavPage) => {
@@ -53,9 +54,8 @@ export const Navbar: React.FC<NavbarProps> = ({ setCurrentPage, currentPage }) =
   return (
     <nav
       dir={isAr ? 'rtl' : 'ltr'}
-      className={`sticky top-0 z-50 transition-all duration-500 ${
-        scrolled ? 'bg-white/95 backdrop-blur-md shadow-xl py-2' : 'bg-white py-4'
-      } border-b-4 border-school-red`}
+      className={`sticky top-0 z-50 transition-all duration-500 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-xl py-2' : 'bg-white py-4'
+        } border-b-4 border-school-red`}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
 
@@ -86,15 +86,13 @@ export const Navbar: React.FC<NavbarProps> = ({ setCurrentPage, currentPage }) =
               <button
                 key={page}
                 onClick={() => handleNavClick(page)}
-                className={`text-xs font-black uppercase tracking-[0.2em] transition-all relative py-2 group ${
-                  currentPage === page ? 'text-school-red' : 'text-slate-600 hover:text-school-red'
-                }`}
+                className={`text-xs font-black uppercase tracking-[0.2em] transition-all relative py-2 group ${currentPage === page ? 'text-school-red' : 'text-slate-600 hover:text-school-red'
+                  }`}
               >
                 {navLabels[page]}
                 <span
-                  className={`absolute bottom-0 left-0 h-0.5 bg-school-red transition-all duration-300 ${
-                    currentPage === page ? 'w-full' : 'w-0 group-hover:w-full'
-                  }`}
+                  className={`absolute bottom-0 left-0 h-0.5 bg-school-red transition-all duration-300 ${currentPage === page ? 'w-full' : 'w-0 group-hover:w-full'
+                    }`}
                 />
               </button>
             ))}
@@ -135,9 +133,8 @@ export const Navbar: React.FC<NavbarProps> = ({ setCurrentPage, currentPage }) =
 
       {/* Mobile overlay menu */}
       <div
-        className={`fixed inset-0 top-[76px] bg-slate-950 z-40 md:hidden transition-all duration-500 transform ${
-          isOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'
-        }`}
+        className={`fixed inset-0 top-[76px] bg-slate-950 z-40 md:hidden transition-all duration-500 transform ${isOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'
+          }`}
         aria-hidden={!isOpen}
       >
         <div className="p-10 space-y-6">
@@ -146,9 +143,8 @@ export const Navbar: React.FC<NavbarProps> = ({ setCurrentPage, currentPage }) =
               key={page}
               onClick={() => handleNavClick(page)}
               style={{ transitionDelay: `${i * 100}ms` }}
-              className={`block text-5xl font-black uppercase italic w-full text-left rtl:text-right transition-all ${
-                currentPage === page ? 'text-school-red translate-x-4 rtl:-translate-x-4' : 'text-white/20'
-              }`}
+              className={`block text-5xl font-black uppercase italic w-full text-left rtl:text-right transition-all ${currentPage === page ? 'text-school-red translate-x-4 rtl:-translate-x-4' : 'text-white/20'
+                }`}
             >
               {navLabels[page]}
             </button>

@@ -1,6 +1,5 @@
 import React from 'react';
 import schoolLogo from '../assets/schoolLogo.png';
-import facebookLogo from '../assets/FBLogo.png';
 import { useLanguage } from '../hooks/useLanguage';
 import { translations } from '../locales';
 import { IconPin, IconPhone, IconClock } from './shared/icons';
@@ -9,6 +8,9 @@ import { IconPin, IconPhone, IconClock } from './shared/icons';
  * Footer — reads language from context and resolves all strings via the
  * typed translations map. No lang prop required.
  */
+
+const facebookLogo = <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAACLklEQVR4AbSVvXnCMBCG5WyQMl3YgDJdYJLAJMAksAlkEtggKdM573u2HBtbD27iR59POt2/TvZT+udn0kFd169g1+IMLeHInthAV1OxDhwgpOEzglewBxvwCkrDPWWOCBjEVRvMu9E5aDc0rNK+ap4FRKyhJVRYWwADgiQdddl0DtgxioQhDR5Yzx7o3IA661Zp19IUDohej2KbN0oUWett3Y00Q12Du6GnoxVywQsHMC2LAifmxYGS52Om1j3LqdtFDPMCHO++soNYyCgB4xoxqhPlcMSZIG/UkGaw4VoEIztwkT07L8Fab3FmCaI8COoUMhg6CH52YJoDiYmFCiq6lbNxblmtu/MRsoPRxgzGhXJYpi20mP1DB205jPg+Sy9lvu33e118Dx0g+QG8RPdGXMsXBoDYeMxxoCHLQSWquEhVVVmayqc1mc+mXf6ROQ6UtmuoVu09SEzsIEhduwk+weToOzDSKSFvt2W4j9K1/KlD1pb7zacCq8UuoAz2vm0YCsjmEXz2bdPMG9E5GYyUZjDMIMqWHcSCova/MTPsjEV6NiLjcECalkgU221sqsjRhl2nve4MlPYwvTz+lRSSNxtE7qWzqyyPZxa6kYEzsjAl/0zSPQoOnQnbc4ncG8wvqN+lJfN+u9pRRr3AlhSxNMjA/4Gd4WUSZqSgUPiHl4Ck75SSSDwaFhr2Ahog7GZ0GTTL5m0EwO++PS5UfIH33EM2eIAnBoYbSyn9AgAA//8gWV0oAAAABklEQVQDAPAqGEDxGWc2AAAAAElFTkSuQmCC" alt="icon" />
+
 export const Footer: React.FC = () => {
   const { lang } = useLanguage();
   const t = translations[lang];
@@ -40,7 +42,7 @@ export const Footer: React.FC = () => {
               aria-label="Visit us on Facebook"
               className="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center hover:bg-school-red transition-all group shadow-lg"
             >
-              <img src={facebookLogo} alt="Facebook" className="w-5 h-5 opacity-70 group-hover:opacity-100 transition-opacity" loading="lazy" />
+              {facebookLogo}
             </a>
           </div>
         </div>
@@ -115,10 +117,7 @@ export const Footer: React.FC = () => {
       {/* Bottom bar */}
       <div className="max-w-7xl mx-auto mt-20 pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] font-black uppercase tracking-[0.2em] text-slate-600">
         <p>{t.footer.copyright.text}</p>
-        <p>
-          {t.footer.copyright.dev}{' '}
-          <span className="text-slate-300 hover:text-school-red cursor-pointer transition">WBTech Co.</span>
-        </p>
+
       </div>
     </footer>
   );

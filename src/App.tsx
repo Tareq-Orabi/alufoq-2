@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
-import { Navbar } from './components/navBar';
+import { Navbar } from './Components/navBar';
 import { Home } from './pages/Home';
-import { About } from './sections/about';
-import { News } from './sections/news';
-import { Events } from './sections/events';
-import { Footer } from './components/footer';
+import { About } from './Sections/about';
+import { News } from './Sections/news';
+import { Events } from './Sections/events';
+import { Blog } from './Sections/blog';
+import { Footer } from './Components/footer';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from './hooks/useLanguage';
 
-type Page = 'home' | 'about' | 'news' | 'events';
+type Page = 'home' | 'about' | 'news' | 'events' | 'blog';
 
 /**
  * PageWrapper — entrance/exit animation shell for each route.
@@ -59,6 +60,12 @@ function App() {
           {currentPage === 'events' && (
             <PageWrapper key="events">
               <Events lang={lang} />
+            </PageWrapper>
+          )}
+
+          {currentPage === 'blog' && (
+            <PageWrapper key="blog">
+              <Blog lang={lang} />
             </PageWrapper>
           )}
         </AnimatePresence>
