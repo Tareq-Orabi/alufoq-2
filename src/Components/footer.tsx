@@ -100,7 +100,7 @@ export const Footer: React.FC = () => {
           </h4>
           <div className="w-full h-44 bg-slate-900 rounded-2xl overflow-hidden grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-700 border border-slate-800 p-1">
             <iframe
-              src="https://maps.google.com/maps?q=32.03305435180664,35.8515625&hl=en&z=17&output=embed"
+              src="https://maps.google.com/maps?q=31.8637639,35.8268941&hl=en&z=17&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0, borderRadius: '0.75rem' }}
