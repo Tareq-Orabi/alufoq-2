@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Navbar } from './Components/navBar';
+import { Navbar } from './components/navBar';
 import { Home } from './pages/Home';
-import { About } from './Sections/about';
-import { News } from './Sections/news';
-import { Events } from './Sections/events';
-import { Blog } from './Sections/blog';
-import { Footer } from './Components/footer';
+import { About } from './sections/about';
+import { News } from './sections/news';
+import { Events } from './sections/events';
+import { Blog } from './sections/blog';
+import { Footer } from './components/footer';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from './hooks/useLanguage';
 

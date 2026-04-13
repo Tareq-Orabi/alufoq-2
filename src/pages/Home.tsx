@@ -1,8 +1,8 @@
 import React from 'react';
 import { useLanguage } from '../hooks/useLanguage';
-import HeroSection from '../Components/home/HeroSection';
-import AcademicSection from '../Components/home/AcademicSection';
-import StatsSection from '../Components/home/StatsSection';
+import HeroSection from '../components/home/HeroSection';
+import AcademicSection from '../components/home/AcademicSection';
+import StatsSection from '../components/home/StatsSection';
 
 /**
  * Home page — thin orchestrator that composes section components.
