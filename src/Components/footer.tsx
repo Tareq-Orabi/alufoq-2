@@ -24,7 +24,7 @@ export const Footer: React.FC = () => {
         {/* Column 1: Brand */}
         <div className="space-y-8">
           <div className="flex items-center gap-4">
-            <img src={schoolLogo} alt="Al-Ofoq School Logo" className="w-14 h-14 object-contain" loading="lazy" />
+            <img src={schoolLogo} alt="Al-Ufoq School Logo" className="w-14 h-14 object-contain" loading="lazy" />
             <span className="text-3xl font-black tracking-tighter italic uppercase text-white">
               {t.footer.brand.name}
             </span>
@@ -93,15 +93,21 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Column 4: Map placeholder */}
+        {/* Column 4: Map */}
         <div className="space-y-8">
           <h4 className="text-xs font-black uppercase tracking-[0.3em] text-school-red">
             {t.footer.location.title}
           </h4>
-          <div className="w-full h-44 bg-slate-900 rounded-2xl overflow-hidden grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-700 border border-slate-800 p-1">
-            <div className="w-full h-full bg-slate-950 rounded-xl flex items-center justify-center text-slate-700 text-[10px] uppercase font-black tracking-tighter text-center px-4">
-              {t.footer.location.mapText}
-            </div>
+          <div className="w-full h-44 bg-slate-900 rounded-2xl overflow-hidden grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-700 border border-slate-800 p-1">
+            <iframe
+              src="https://maps.google.com/maps?q=32.03305435180664,35.8515625&hl=en&z=17&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0, borderRadius: '0.75rem' }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title={t.footer.location.mapText}
+            ></iframe>
           </div>
         </div>
       </div>

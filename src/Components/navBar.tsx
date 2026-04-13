@@ -64,14 +64,14 @@ export const Navbar: React.FC<NavbarProps> = ({ setCurrentPage, currentPage }) =
           <div className="relative">
             <img
               src={schoolLogo}
-              alt="Al-Ofoq School Logo"
+              alt="Al-Ufoq School Logo"
               className="w-12 h-12 md:w-14 md:h-14 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6"
               loading="lazy"
             />
           </div>
           <div className="flex flex-col items-start leading-none">
             <span className="text-2xl md:text-3xl font-black text-slate-950 tracking-tighter italic uppercase">
-              <span className="text-school-red">{isAr ? 'الأفق' : 'ALOFOQ'}</span>
+              <span className="text-school-red">{isAr ? 'الأفق' : 'ALUFOQ'}</span>
             </span>
             <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">
               {isAr ? 'مدرسة وروضة' : 'School & KG'}

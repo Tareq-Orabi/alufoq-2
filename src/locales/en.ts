@@ -14,7 +14,7 @@ export const en: Translations = {
     getInTouch: 'Get in touch',
   },
   hero: {
-    welcome: 'Welcome to Al-Ofoq',
+    welcome: 'Welcome to Al-Ufoq',
     discover: 'Discover',
     school: 'Our School',
     statsHtml: {
@@ -24,7 +24,7 @@ export const en: Translations = {
       mid: ' and ',
       post: ' members.',
     },
-    desc: 'Al-Ofoq School & Kindergarten is a premier private educational institution in Amman, Jordan. We provide a supportive, coeducational environment focused on academic rigor.',
+    desc: 'Al-Ufoq School & Kindergarten is a premier private educational institution in Amman, Jordan. We provide a supportive, coeducational environment focused on academic rigor.',
   },
   academic: {
     tag: 'Academic Foundation',
@@ -44,7 +44,7 @@ export const en: Translations = {
   stats: {
     tag: 'Our Goals & Impact',
     title: 'School Statistics',
-    desc: 'Here you can review some key statistics reflecting the success and dedication of our Al-Ofoq community.',
+    desc: 'Here you can review some key statistics reflecting the success and dedication of our Al-Ufoq community.',
     cards: [
       { label: 'Certified Expert Teachers', value: '67' },
       { label: 'Active Students Enrolled', value: '5,673' },
@@ -56,13 +56,13 @@ export const en: Translations = {
     tag: 'Our Vision',
     title: 'A Leading Educational Model',
     description:
-      'Al-Ofoq Secondary School aims to be a leading model in education across Jordan, providing comprehensive education that combines academic excellence with vocational and technical qualification, and preparing a creative generation capable of innovation and competing in local and global labor markets.',
+      'Al-Ufoq Secondary School aims to be a leading model in education across Jordan, providing comprehensive education that combines academic excellence with vocational and technical qualification, and preparing a creative generation capable of innovation and competing in local and global labor markets.',
   },
   mission: {
     tag: 'Our Mission',
     title: 'A Stimulating Learning Environment',
     description:
-      "Al-Ofoq Secondary School seeks to provide a stimulating learning environment that supports academic learning and the BTEC professional pathway, with a focus on developing programming and technology skills, and promoting commitment and discipline, through modern educational programs, training workshops, and interactive competitions, to build a student's comprehensive personality—scientifically and skillfully—capable of achieving their ambitions and serving their community.",
+      "Al-Ufoq Secondary School seeks to provide a stimulating learning environment that supports academic learning and the BTEC professional pathway, with a focus on developing programming and technology skills, and promoting commitment and discipline, through modern educational programs, training workshops, and interactive competitions, to build a student's comprehensive personality—scientifically and skillfully—capable of achieving their ambitions and serving their community.",
   },
   goals: {
     tag: 'Our Goals',
@@ -84,7 +84,7 @@ export const en: Translations = {
     tag: 'Student Guidelines',
     title: 'Rules of Conduct',
     description:
-      'To preserve the vision, mission, and goals of Al-Ofoq Secondary Schools, and to raise a generation that believes in its Lord, belongs to its religion, nation, and country, relying on itself in an educational environment that strengthens the bonds of love between the student, teachers, and school, we present to you the instructions and rules of conduct that help achieve this:',
+      'To preserve the vision, mission, and goals of Al-Ufoq Secondary Schools, and to raise a generation that believes in its Lord, belongs to its religion, nation, and country, relying on itself in an educational environment that strengthens the bonds of love between the student, teachers, and school, we present to you the instructions and rules of conduct that help achieve this:',
     items: [
       'Demonstrate good Islamic morals in dealing with everyone.',
       'Maintain personal hygiene and avoid strange haircuts.',
@@ -102,8 +102,8 @@ export const en: Translations = {
   },
   footer: {
     brand: {
-      name: 'Al-Ofoq',
-      desc: 'Al-Ofoq holds a rich history and goodwill within the community, providing an extensive foundation for academic and personal growth.',
+      name: 'Al-Ufoq',
+      desc: 'Al-Ufoq holds a rich history and goodwill within the community, providing an extensive foundation for academic and personal growth.',
     },
     contacts: {
       title: 'Contacts',
@@ -123,7 +123,7 @@ export const en: Translations = {
       mapText: 'Interactive Map (Marka, Amman)',
     },
     copyright: {
-      text: 'Copyright © Al-Ofoq School',
+      text: 'Copyright © Al-Ufoq School',
       dev: 'Developed by',
     },
   },

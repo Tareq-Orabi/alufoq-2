@@ -22,7 +22,7 @@ const HeroSection: React.FC = () => {
       <div className={`absolute inset-0 z-0 overflow-hidden ${isAr ? 'lg:right-1/3' : 'lg:left-1/3'}`}>
         <img
           src={school}
-          alt="Al-Ofoq school campus"
+          alt="Al-Ufoq school campus"
           className="w-full h-full object-cover transform scale-105"
           loading="lazy"
         />
