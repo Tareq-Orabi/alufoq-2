@@ -108,7 +108,7 @@ export const en: Translations = {
     },
     contacts: {
       title: 'Contacts',
-      address: 'Marka Bridge, Marka, Amman, Jordan',
+      address: ' Naour area, Amman, Jordan',
       hours: 'Sun — Thu: 7AM — 4PM',
     },
     posts: {
@@ -121,7 +121,7 @@ export const en: Translations = {
     },
     location: {
       title: 'Location',
-      mapText: 'Interactive Map (Marka, Amman)',
+      mapText: 'Interactive Map (Naour area, Amman)',
     },
     copyright: {
       text: 'Copyright © Al-Ufoq School',

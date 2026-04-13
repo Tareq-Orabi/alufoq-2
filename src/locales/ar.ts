@@ -108,7 +108,7 @@ export const ar: Translations = {
     },
     contacts: {
       title: 'اتصل بنا',
-      address: 'جسر ماركا، ماركا، عمان، الأردن',
+      address: ' منطقة ناعور، عمان، الأردن',
       hours: 'الأحد — الخميس: 7 صباحاً — 4 مساءً',
     },
     posts: {
@@ -121,7 +121,7 @@ export const ar: Translations = {
     },
     location: {
       title: 'الموقع',
-      mapText: 'خريطة تفاعلية (ماركا، عمان)',
+      mapText: 'خريطة تفاعلية (منطقة ناعور، عمان)',
     },
     copyright: {
       text: 'حقوق النشر © مدرسة الأفق',

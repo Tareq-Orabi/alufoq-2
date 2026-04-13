@@ -19,22 +19,23 @@ const HeroSection: React.FC = () => {
   return (
     <section className="relative bg-slate-50 lg:min-h-[90vh] flex items-center" aria-label="Hero">
       {/* Background campus image — positioned based on text direction */}
-      <div className={`absolute inset-0 z-0 overflow-hidden ${isAr ? 'lg:right-1/3' : 'lg:left-1/3'}`}>
+      <div className={`absolute inset-0 z-0 overflow-hidden ${isAr ? 'lg:right-1/4' : 'lg:left-1/4'}`}>
         <img
           src={image3}
-          alt="Al-Ofoq school campus"
+          alt="Al-Ufoq school campus"
           className="w-full h-full object-cover transform scale-105"
           loading="lazy"
         />
+        {/* Soft edge fade instead of a heavy white wash, keeping the image sharp */}
         <div
-          className={`absolute inset-0 bg-gradient-to-r from-slate-50 via-slate-50/80 lg:from-transparent z-10 ${isAr ? 'rotate-180' : ''}`}
+          className={`absolute inset-0 bg-gradient-to-r from-slate-50 from-0% via-slate-50/20 to-transparent to-50% z-10 ${isAr ? 'rotate-180' : ''}`}
           aria-hidden="true"
         />
       </div>
 
       <div className="relative z-20 max-w-7xl mx-auto px-6 py-12 lg:py-24 w-full">
         <div
-          className={`lg:max-w-[65%] bg-white/20 p-10 md:p-20 rounded-2xl rounded-tr-[80px] rounded-bl-[80px] ${isAr ? 'border-r-4 border-school-red' : 'border-l-4 border-school-red'
+          className={`lg:max-w-[55%] bg-white/80 shadow-2xl backdrop-blur-sm p-8 md:p-14 rounded-2xl rounded-tr-[80px] rounded-bl-[80px] ${isAr ? 'border-r-4 border-school-red' : 'border-l-4 border-school-red'
             } relative overflow-hidden`}
         >
           <div className="relative z-10">

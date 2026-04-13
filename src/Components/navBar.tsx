@@ -81,7 +81,7 @@ export const Navbar: React.FC<NavbarProps> = ({ setCurrentPage, currentPage }) =
 
         {/* Desktop menu */}
         <div className="hidden md:flex items-center gap-10">
-          <div className="flex space-x-8 rtl:space-x-reverse">
+          <div className="flex gap-8 md:gap-10">
             {NAV_PAGES.map((page) => (
               <button
                 key={page}
