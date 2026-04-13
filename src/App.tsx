@@ -13,6 +13,7 @@ type Page = 'home' | 'about' | 'news' | 'events';
 /**
  * PageWrapper — entrance/exit animation shell for each route.
  */
+
 const PageWrapper = ({ children }: { children: React.ReactNode }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
