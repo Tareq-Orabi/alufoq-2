@@ -5,4 +5,4 @@
  * keeping the context implementation detail isolated and making future
  * migration to Zustand / Jotai a one-file change.
  */
-export { useLanguage } from '../context/LanguageContext';
+export { useLanguage } from '../Context/LanguageContext';

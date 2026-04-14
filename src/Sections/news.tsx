@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { NEWS_DATA } from '../data/schoolData';
+import { NEWS_DATA } from '../Data/schoolData';
 
 interface NewsProps {
     lang: 'en' | 'ar';

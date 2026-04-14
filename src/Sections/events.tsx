@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import type { SchoolEvent } from '../data/schoolData';
-import { EVENTS_DATA } from '../data/schoolData';
+import type { SchoolEvent } from '../Data/schoolData';
+import { EVENTS_DATA } from '../Data/schoolData';
 
 interface EventsProps {
     lang: 'en' | 'ar';

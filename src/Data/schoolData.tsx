@@ -1,4 +1,4 @@
-import type { NewsItem, SchoolEvent, NewsArticle } from '../types/interface';
+import type { NewsItem, SchoolEvent, NewsArticle } from '../Types/interface';
 import image from '../assets/image.jpg';
 import image2 from '../assets/image2.jpg';
 import image5 from '../assets/image5.jpg';

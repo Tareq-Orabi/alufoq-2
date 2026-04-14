@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../../hooks/useLanguage';
 import { translations } from '../../locales';
-import { CALENDAR_DATA, CalendarMonth } from '../../data/calendar';
+import { CALENDAR_DATA, CalendarMonth } from '../../Data/calendar';
 import { IconCalendar } from '../shared/icons';
 
 /**
