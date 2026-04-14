@@ -69,6 +69,7 @@ export const About = ({ lang }: { lang: 'en' | 'ar' }) => {
                 </ul>
             </div>
 
+
             {/* 4. Rules Section (Numbered List) */}
             <div className="bg-slate-900 rounded-[32px] p-8 lg:p-16 text-white border-4 border-slate-800">
                 <div className="max-w-3xl mb-12">
@@ -94,6 +95,7 @@ export const About = ({ lang }: { lang: 'en' | 'ar' }) => {
                     ))}
                 </div>
             </div>
+
 
         </section>
     );
