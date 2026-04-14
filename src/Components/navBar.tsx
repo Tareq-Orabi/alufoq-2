@@ -5,12 +5,12 @@ import { translations } from '../locales';
 import { IconGlobe, IconMenu, IconClose } from './shared/icons';
 
 interface NavbarProps {
-  setCurrentPage: (page: 'home' | 'about' | 'news' | 'events' | 'blog') => void;
+  setCurrentPage: (page: 'home' | 'about' | 'news' | 'events') => void;
   currentPage: string;
 }
 
-type NavPage = 'home' | 'about' | 'events' | 'news' | 'blog';
-const NAV_PAGES: NavPage[] = ['home', 'about', 'events', 'news', 'blog'];
+type NavPage = 'home' | 'about' | 'events' | 'news';
+const NAV_PAGES: NavPage[] = ['home', 'about', 'events', 'news'];
 
 /**
  * Navbar — reads lang from context, uses typed translations for labels.
@@ -30,7 +30,6 @@ export const Navbar: React.FC<NavbarProps> = ({ setCurrentPage, currentPage }) =
     about: t.nav.about,
     events: t.nav.events,
     news: t.nav.news,
-    blog: t.nav.blog,
   };
 
   const handleNavClick = (page: NavPage) => {

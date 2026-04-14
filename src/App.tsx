@@ -4,12 +4,11 @@ import { Home } from './pages/Home';
 import { About } from './sections/about';
 import { News } from './sections/news';
 import { Events } from './sections/events';
-import { Blog } from './sections/blog';
 import { Footer } from './components/footer';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from './hooks/useLanguage';
 
-type Page = 'home' | 'about' | 'news' | 'events' | 'blog';
+type Page = 'home' | 'about' | 'news' | 'events';
 
 /**
  * PageWrapper — entrance/exit animation shell for each route.
@@ -33,7 +32,10 @@ function App() {
   const { lang } = useLanguage();
 
   return (
-    <div className="min-h-screen flex flex-col bg-white selection:bg-school-red selection:text-white">
+    <div 
+      className={`min-h-screen flex flex-col bg-white selection:bg-school-red selection:text-white ${lang === 'ar' ? 'font-arabic' : ''}`}
+      dir={lang === 'ar' ? 'rtl' : 'ltr'}
+    >
       {/* Navbar reads lang from context internally */}
       <Navbar setCurrentPage={setCurrentPage} currentPage={currentPage} />
 
@@ -60,12 +62,6 @@ function App() {
           {currentPage === 'events' && (
             <PageWrapper key="events">
               <Events lang={lang} />
-            </PageWrapper>
-          )}
-
-          {currentPage === 'blog' && (
-            <PageWrapper key="blog">
-              <Blog lang={lang} />
             </PageWrapper>
           )}
         </AnimatePresence>

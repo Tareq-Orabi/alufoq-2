@@ -10,7 +10,6 @@ export const ar: Translations = {
     about: 'من نحن',
     events: 'الفعاليات',
     news: 'الأخبار',
-    blog: 'مدونة',
     langSwitch: 'English',
     getInTouch: 'معلومات التواصل',
   },
