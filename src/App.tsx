@@ -4,7 +4,6 @@ import { Home } from './pages/Home';
 import { About } from './sections/about';
 import { News } from './sections/news';
 import { Events } from './sections/events';
-import { Blog } from './sections/blog';
 import { Footer } from './components/footer';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from './hooks/useLanguage';
@@ -63,11 +62,7 @@ function App() {
             </PageWrapper>
           )}
 
-          {currentPage === 'blog' && (
-            <PageWrapper key="blog">
-              <Blog lang={lang} />
-            </PageWrapper>
-          )}
+         
         </AnimatePresence>
       </main>
 
