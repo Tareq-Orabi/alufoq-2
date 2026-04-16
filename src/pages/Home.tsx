@@ -4,6 +4,7 @@ import HeroSection from '../Components/home/HeroSection';
 import AcademicSection from '../Components/home/AcademicSection';
 import ServicesSection from '../Components/home/ServicesSection';
 import StatsSection from '../Components/home/StatsSection';
+import { Sub } from '../Components/home/sub';
 
 /**
  * Home page — thin orchestrator that composes section components.
@@ -24,6 +25,7 @@ const Home: React.FC = () => {
       <ServicesSection />
       <AcademicSection />
       <StatsSection />
+      <Sub />
     </div>
   );
 };

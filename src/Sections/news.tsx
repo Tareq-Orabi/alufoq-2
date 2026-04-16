@@ -69,12 +69,7 @@ export const News: React.FC<NewsProps> = ({ lang }) => {
                             {isRtl ? 'أخبار المدرسة' : 'School News'}
                         </h1>
                     </div>
-                    <button
-                        onClick={() => handleOpenModal()}
-                        className="bg-slate-950 text-white px-10 py-5 rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-school-red transition-all shadow-xl active:scale-95"
-                    >
-                        {isRtl ? '+ نشر خبر جديد' : '+ Post News'}
-                    </button>
+                    
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -87,14 +82,7 @@ export const News: React.FC<NewsProps> = ({ lang }) => {
                             viewport={{ once: true }}
                             className="group bg-white rounded-[40px] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col relative border border-slate-100"
                         >
-                            <div className={`absolute top-6 ${isRtl ? 'left-6' : 'right-6'} z-10 flex gap-2 opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0`}>
-                                <button onClick={() => handleOpenModal(item)} className="p-3 bg-white shadow-xl rounded-xl text-slate-600 hover:text-blue-600 transition">
-                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
-                                </button>
-                                <button onClick={() => handleDelete(item.id)} className="p-3 bg-white shadow-xl rounded-xl text-slate-600 hover:text-school-red transition">
-                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
-                                </button>
-                            </div>
+                            
 
                             <div className="relative h-72 overflow-hidden">
                                 <img src={item.image} alt="" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
