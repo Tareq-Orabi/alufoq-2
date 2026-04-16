@@ -9,7 +9,7 @@ interface NewsProps {
 export const News: React.FC<NewsProps> = ({ lang }) => {
     const [news, setNews] = useState(NEWS_DATA);
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [editingItem, setEditingItem] = useState<any | null>(null);
+    const [editingItem] = useState<any | null>(null);
 
     // Tab State for Modal
     const [activeFormTab, setActiveFormTab] = useState<'en' | 'ar'>(lang);

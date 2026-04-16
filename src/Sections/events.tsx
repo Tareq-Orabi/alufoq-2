@@ -11,7 +11,7 @@ export const Events: React.FC<EventsProps> = ({ lang }) => {
     const [events, setEvents] = useState<SchoolEvent[]>(EVENTS_DATA);
     const [selectedEvent, setSelectedEvent] = useState<SchoolEvent | null>(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [editingEvent, setEditingEvent] = useState<SchoolEvent | null>(null);
+    const [editingEvent] = useState<SchoolEvent | null>(null);
 
     // UI State for the Modal form
     const [activeFormTab, setActiveFormTab] = useState<'en' | 'ar'>(lang);
