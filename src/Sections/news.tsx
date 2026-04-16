@@ -25,20 +25,7 @@ export const News: React.FC<NewsProps> = ({ lang }) => {
         setExpandedItems(prev => prev.includes(id) ? prev.filter(i => i !== id) : [...prev, id]);
     };
 
-    const handleOpenModal = (item?: any) => {
-        if (item) {
-            setEditingItem(item);
-            setFormData(item);
-        } else {
-            setEditingItem(null);
-            setFormData({
-                title: '', titleAr: '', excerpt: '', excerptAr: '',
-                image: '', date: 'Apr 12, 2026', dateAr: '١٢ أبريل ٢٠٢٦'
-            });
-        }
-        setActiveFormTab(lang);
-        setIsModalOpen(true);
-    };
+   
 
     const handleSave = (e: React.FormEvent) => {
         e.preventDefault();
@@ -51,11 +38,7 @@ export const News: React.FC<NewsProps> = ({ lang }) => {
         setIsModalOpen(false);
     };
 
-    const handleDelete = (id: number) => {
-        if (window.confirm(isRtl ? 'حذف هذا الخبر؟' : 'Delete this news item?')) {
-            setNews(news.filter(n => n.id !== id));
-        }
-    };
+    
 
     return (
         <section dir={isRtl ? 'rtl' : 'ltr'} className="py-24 px-6 bg-slate-50 min-h-screen relative">
