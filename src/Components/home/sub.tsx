@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useLanguage } from '../../hooks/useLanguage';
 import sub2 from '../../assets/image10.jpg';
 import sub3 from '../../assets/image11.jpg';
 import sub4 from '../../assets/image12.jpg';
@@ -40,6 +41,9 @@ const SponsorCard = ({ sponsor, index }: SponsorCardProps) => {
 };
 
 export const Sub = () => {
+    const { lang } = useLanguage();
+    const isRtl = lang === 'ar';
+
     const sponsors = [
         { name: 'Horizon Labs', caption: 'Innovation Partner', logo:   sub2 },
         { name: 'Nova Works', caption: 'Education Sponsor', logo: sub3 },
@@ -64,7 +68,7 @@ export const Sub = () => {
                 >
                     
                     <h2 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
-                        COLLABORATION
+                        {isRtl ? 'شركاء النجاح' : 'COLLABORATION'}
                     </h2>
                 </motion.div>
 
