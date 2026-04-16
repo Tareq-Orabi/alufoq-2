@@ -96,4 +96,17 @@ export interface Translations {
     of: string;
     dirArrow: string;
   };
+  services: {
+    sectionLabel: string;
+    tag: string;
+    title: string;
+    overviewTag: string;
+    overviewTitle: string;
+    overviewDesc: string;
+    programsTag: string;
+    programs: string[];
+    tracksTag: string;
+    trackLabel: string;
+    tracks: Array<{ title: string; desc: string }>;
+  };
 }

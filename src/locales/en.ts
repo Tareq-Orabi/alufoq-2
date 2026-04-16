@@ -132,4 +132,37 @@ export const en: Translations = {
     of: 'of',
     dirArrow: '→',
   },
+  services: {
+    sectionLabel: 'Programs & Tracks',
+    tag: 'What We Offer',
+    title: 'Our Programs & Tracks',
+    overviewTag: 'Al-Ufoq School',
+    overviewTitle: 'Comprehensive Pathways for Every Student',
+    overviewDesc:
+      'Al-Ufoq School offers a rich spectrum of educational programs — from early childhood to vocational training — designed to nurture every student\'s potential and prepare them for a competitive future.',
+    programsTag: 'Offered Programs',
+    programs: [
+      'Playgroup',
+      'Kindergarten',
+      'Learning Support',
+      'National Program',
+      'BTEC Program',
+    ],
+    tracksTag: 'Secondary Tracks',
+    trackLabel: 'Track',
+    tracks: [
+      {
+        title: 'Scientific Track',
+        desc: 'Focuses on mathematics, sciences, and advanced analytical skills to prepare students for STEM university pathways.',
+      },
+      {
+        title: 'Literary Track',
+        desc: 'Develops strong linguistic, literary, and humanistic skills for students inclined toward arts, law, and social sciences.',
+      },
+      {
+        title: 'BTEC Track',
+        desc: 'An internationally recognised vocational qualification providing hands-on technical and professional skills alongside academic study.',
+      },
+    ],
+  },
 };

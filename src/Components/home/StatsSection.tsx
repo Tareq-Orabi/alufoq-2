@@ -42,10 +42,10 @@ const StatsSection: React.FC = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section header */}
         <div className="text-center mb-20 max-w-2xl mx-auto">
-          <h2 className="text-sm font-black text-school-red uppercase tracking-[0.3em] mb-4">
+          <h2 className="text-2xl font-black text-school-white uppercase tracking-[0.3em] mb-4">
             {t.stats.tag}
           </h2>
-          <p className="text-5xl font-black tracking-tighter leading-tight uppercase italic mb-6">
+          <p className={`font-black leading-tight mb-6 tracking-tight ${lang === 'ar' ? '' : 'text-5xl tracking-tighter uppercase italic'}`} style={{ fontSize: lang === 'ar' ? '80px' : undefined }}>
             {t.stats.title}
           </p>
           <p className="text-xl text-slate-400 font-light leading-relaxed">{t.stats.desc}</p>

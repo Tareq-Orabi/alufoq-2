@@ -40,7 +40,7 @@ const HeroSection: React.FC = () => {
         >
           <div className="relative z-10">
             {/* Welcome badge */}
-            <span className="inline-flex items-center gap-3 text-school-red font-black uppercase tracking-[0.3em] text-xs mb-8">
+            <span className="inline-flex items-center gap-3 text-school-red font-black uppercase tracking-[0.3em] text-xl mb-8">
               <span className="relative flex h-3 w-3" aria-hidden="true">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-school-red opacity-75" />
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-school-red" />
@@ -49,9 +49,9 @@ const HeroSection: React.FC = () => {
             </span>
 
             {/* Main headline */}
-            <h1 className="text-5xl md:text-7xl font-black mb-10 leading-[0.95] tracking-tighter text-slate-950 uppercase italic">
+            <h1 className={`font-black mb-10 tracking-tight text-slate-950 ${isAr ? 'leading-snug' : 'text-5xl md:text-7xl leading-[0.95] tracking-tighter uppercase italic'}`} style={{ fontSize: isAr ? 'clamp(60px, 8vw, 96px)' : undefined }}>
               {t.hero.discover} <br />
-              <span className="text-school-red not-italic">{t.hero.school}</span>
+              <span className={`text-school-red ${isAr ? '' : 'not-italic'}`}>{t.hero.school}</span>
             </h1>
 
             {/* Stat + description */}

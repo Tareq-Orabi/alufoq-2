@@ -40,7 +40,7 @@ export const Footer: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit us on Facebook"
-              className="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center hover:bg-school-red transition-all group shadow-lg"
+              className="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center hover:bg-school-white transition-all group shadow-lg"
             >
               {facebookLogo}
             </a>
@@ -49,25 +49,25 @@ export const Footer: React.FC = () => {
 
         {/* Column 2: Contacts */}
         <div className="space-y-8">
-          <h4 className="text-xs font-black uppercase tracking-[0.3em] text-school-red">
+          <h4 className="text-xs font-black uppercase tracking-[0.3em] text-school-white">
             {t.footer.contacts.title}
           </h4>
           <ul className="space-y-6">
             <li className="flex items-start gap-4 group">
-              <div className="p-2 bg-slate-900 rounded-lg group-hover:bg-school-red/10 transition shrink-0">
-                <IconPin className="w-5 h-5 text-school-red" />
+              <div className="p-2 bg-slate-900 rounded-lg group-hover:bg-school-white/10 transition shrink-0">
+                <IconPin className="w-5 h-5 text-school-white" />
               </div>
               <span className="text-slate-400 text-sm leading-relaxed">{t.footer.contacts.address}</span>
             </li>
             <li className="flex items-center gap-4 group">
-              <div className="p-2 bg-slate-900 rounded-lg group-hover:bg-school-red/10 transition shrink-0">
-                <IconPhone className="w-5 h-5 text-school-red" />
+              <div className="p-2 bg-slate-900 rounded-lg group-hover:bg-school-white/10 transition shrink-0">
+                <IconPhone className="w-5 h-5 text-school-white" />
               </div>
               <span className="text-slate-400 text-sm" dir="ltr">+962 77091 7917</span>
             </li>
             <li className="flex items-center gap-4 group">
-              <div className="p-2 bg-slate-900 rounded-lg group-hover:bg-school-red/10 transition shrink-0">
-                <IconClock className="w-5 h-5 text-school-red" />
+              <div className="p-2 bg-slate-900 rounded-lg group-hover:bg-school-white/10 transition shrink-0">
+                <IconClock className="w-5 h-5 text-school-white" />
               </div>
               <span className="text-slate-200 text-xs font-black uppercase tracking-widest">
                 {t.footer.contacts.hours}
@@ -78,12 +78,12 @@ export const Footer: React.FC = () => {
 
         {/* Column 3: Recent Posts */}
         <div className="space-y-8">
-          <h4 className="text-xs font-black uppercase tracking-[0.3em] text-school-red">
+          <h4 className="text-xs font-black uppercase tracking-[0.3em] text-school-white">
             {t.footer.posts.title}
           </h4>
           <div className="space-y-8">
             {t.footer.posts.items.map((post, i) => (
-              <div key={i} className="group cursor-pointer border-l-2 border-slate-900 hover:border-school-red ps-4 transition-all">
+              <div key={i} className="group cursor-pointer border-l-2 border-slate-900 hover:border-school-white ps-4 transition-all">
                 <h5 className="text-sm font-bold text-slate-200 group-hover:text-school-red transition-colors leading-snug">
                   {post.title}
                 </h5>
@@ -97,7 +97,7 @@ export const Footer: React.FC = () => {
 
         {/* Column 4: Map */}
         <div className="space-y-8">
-          <h4 className="text-xs font-black uppercase tracking-[0.3em] text-school-red">
+          <h4 className="text-xs font-black uppercase tracking-[0.3em] text-school-white">
             {t.footer.location.title}
           </h4>
           <div className="w-full h-44 bg-slate-900 rounded-2xl overflow-hidden grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-700 border border-slate-800 p-1">

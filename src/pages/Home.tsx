@@ -2,6 +2,7 @@ import React from 'react';
 import { useLanguage } from '../hooks/useLanguage';
 import HeroSection from '../Components/home/HeroSection';
 import AcademicSection from '../Components/home/AcademicSection';
+import ServicesSection from '../Components/home/ServicesSection';
 import StatsSection from '../Components/home/StatsSection';
 
 /**
@@ -20,6 +21,7 @@ const Home: React.FC = () => {
       dir={isAr ? 'rtl' : 'ltr'}
     >
       <HeroSection />
+      <ServicesSection />
       <AcademicSection />
       <StatsSection />
     </div>

@@ -20,10 +20,10 @@ const AcademicSection: React.FC = () => {
         {/* Left — Academic content */}
         <div className="lg:col-span-2 space-y-12">
           <div>
-            <h2 className="text-sm font-black text-school-red uppercase tracking-[0.3em] mb-4">
+            <h2 className="text-2xl font-black text-school-red uppercase tracking-[0.3em] mb-4">
               {t.academic.tag}
             </h2>
-            <p className="text-5xl font-black tracking-tighter uppercase italic text-slate-950">
+            <p className={`font-black text-slate-950 tracking-tight ${lang === 'ar' ? '' : 'text-5xl tracking-tighter uppercase italic'}`} style={{ fontSize: lang === 'ar' ? '80px' : undefined }}>
               {t.academic.title}
             </p>
           </div>
