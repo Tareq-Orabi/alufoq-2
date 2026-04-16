@@ -22,20 +22,7 @@ export const Events: React.FC<EventsProps> = ({ lang }) => {
         title: '', titleAr: '', day: '', month: '', monthAr: '', time: '', location: '', locationAr: ''
     });
 
-    const handleOpenModal = (event?: SchoolEvent) => {
-        if (event) {
-            setEditingEvent(event);
-            setFormData(event);
-        } else {
-            setEditingEvent(null);
-            setFormData({
-                title: '', titleAr: '', day: '', month: '', monthAr: '',
-                time: '', location: '', locationAr: ''
-            });
-        }
-        setActiveFormTab(lang); // Default modal language to current app language
-        setIsModalOpen(true);
-    };
+    
 
     const handleSave = (e: React.FormEvent) => {
         e.preventDefault();
@@ -48,12 +35,7 @@ export const Events: React.FC<EventsProps> = ({ lang }) => {
         setIsModalOpen(false);
     };
 
-    const handleDelete = (id: number) => {
-        if (window.confirm(isRtl ? 'هل أنت متأكد من الحذف؟' : 'Are you sure you want to delete this event?')) {
-            setEvents(events.filter(ev => ev.id !== id));
-            setSelectedEvent(null);
-        }
-    };
+    
 
     return (
         <section dir={isRtl ? 'rtl' : 'ltr'} className="py-24 px-6 max-w-6xl mx-auto min-h-[600px] relative">
