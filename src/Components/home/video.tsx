@@ -3,7 +3,6 @@ import { useLanguage } from '../../hooks/useLanguage';
 import video from '../../assets/مدارس الأفق Final 2025.mp4';
 
 export const VideoSection = () => {
-    const { lang } = useLanguage();
 
     return (
         <section className="relative w-full py-24 overflow-hidden bg-white">
