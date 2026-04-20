@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { useLanguage } from '../../hooks/useLanguage';
 import video from '../../assets/مدارس الأفق Final 2025.mp4';
 
 export const VideoSection = () => {
