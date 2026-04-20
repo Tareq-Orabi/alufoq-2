@@ -5,6 +5,7 @@ import AcademicSection from '../Components/home/AcademicSection';
 import ServicesSection from '../Components/home/ServicesSection';
 import StatsSection from '../Components/home/StatsSection';
 import { Sub } from '../Components/home/sub';
+import { VideoSection } from '../Components/home/video';
 
 /**
  * Home page — thin orchestrator that composes section components.
@@ -17,11 +18,12 @@ const Home: React.FC = () => {
 
   return (
     <div
-      className={`overflow-x-hidden bg-white text-slate-900 selection:bg-red-50 selection:text-school-red ${isAr ? 'font-arabic' : ''
+      className={`overflow-x-hidden bg-black text-slate-900 selection:bg-red-50 selection:text-school-red ${isAr ? 'font-arabic' : ''
         }`}
       dir={isAr ? 'rtl' : 'ltr'}
     >
       <HeroSection />
+      <VideoSection />
       <ServicesSection />
       <AcademicSection />
       <StatsSection />

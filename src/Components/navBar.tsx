@@ -72,7 +72,7 @@ export const Navbar: React.FC<NavbarProps> = ({ setCurrentPage, currentPage }) =
             <span className="text-2xl md:text-3xl font-black text-slate-950 tracking-tighter italic uppercase">
               <span className="text-school-red">{isAr ? 'الأفق' : 'ALUFOQ'}</span>
             </span>
-            <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">
+            <span className="text-[10px] Font-bold text-black  uppercase tracking-[0.20em]">
               {isAr ? 'مدرسة وروضة' : 'School & KG'}
             </span>
           </div>
