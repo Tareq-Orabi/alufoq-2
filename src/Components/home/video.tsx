@@ -4,7 +4,6 @@ import video from '../../assets/مدارس الأفق Final 2025.mp4';
 
 export const VideoSection = () => {
     const { lang } = useLanguage();
-    const isRtl = lang === 'ar';
 
     return (
         <section className="relative w-full py-24 overflow-hidden bg-white">
