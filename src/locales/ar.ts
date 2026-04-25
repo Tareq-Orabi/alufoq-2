@@ -19,7 +19,7 @@ export const ar: Translations = {
     school: 'مدرستنا',
     statsHtml: {
       studentsCount: '500 طالب',
-      facultyCount: '50 خبيراً',
+      facultyCount: '30 خبيراً',
       pre: 'نحن موطن لـ ',
       mid: ' و ',
       post: ' من أعضاء هيئة التدريس.',
@@ -36,9 +36,18 @@ export const ar: Translations = {
     title: 'التقويم الأكاديمي',
     download: 'تحميل التقويم كاملاً (PDF) ←',
     months: {
-      September: 'أيلول',
-      November: 'تشرين الثاني',
-      June: 'حزيران',
+      January: 'يناير',
+      February: 'فبراير',
+      March: 'مارس',
+      April: 'أبريل',
+      May: 'مايو',
+      June: 'يونيو',
+      July: 'يوليو',
+      August: 'أغسطس',
+      September: 'سبتمبر',
+      October: 'أكتوبر',
+      November: 'نوفمبر',
+      December: 'ديسمبر',
     },
   },
   stats: {
@@ -46,8 +55,8 @@ export const ar: Translations = {
     title: 'إحصائيات المدرسة',
     desc: 'هنا يمكنك مراجعة بعض الإحصائيات الرئيسية التي تعكس نجاح وتفاني مجتمع الأفق.',
     cards: [
-      { label: 'معلمون خبراء معتمدون', value: '67' },
-      { label: 'طلاب نشطون مسجلون', value: '5,673' },
+      { label: 'معلمون خبراء معتمدون', value: '30' },
+      { label: 'طلاب نشطون مسجلون', value: '400' },
       { label: 'نسبة النجاح للجامعات', value: '97%' },
       { label: 'أولياء أمور راضون', value: '100%' },
     ],
@@ -107,7 +116,7 @@ export const ar: Translations = {
     },
     contacts: {
       title: 'اتصل بنا',
-      address: ' منطقة ناعور، عمان، الأردن',
+      address: 'لواء ناعور، عمان',
       hours: 'الأحد — الخميس: 7 صباحاً — 4 مساءً',
     },
     posts: {
@@ -120,7 +129,7 @@ export const ar: Translations = {
     },
     location: {
       title: 'الموقع',
-      mapText: 'خريطة تفاعلية (منطقة ناعور، عمان)',
+      mapText: 'خريطة تفاعلية (VR7G+GQ2، لواء ناعور)',
     },
     copyright: {
       text: 'حقوق النشر © مدرسة الأفق',

@@ -40,3 +40,18 @@ html {
 .animate-drift {
   animation: drift 3s linear infinite;
 }
+
+/* Arabic rendering fixes: prevent letter-spacing and uppercase utilities from
+   breaking Arabic script shaping (esp. on mobile). These override Tailwind
+   tracking/uppercase utilities when the root `font-arabic` class is present. */
+.font-arabic .uppercase {
+  text-transform: none !important;
+}
+
+.font-arabic [class*="tracking"] {
+  letter-spacing: normal !important;
+}
+
+.font-arabic [class*="tracking-"] {
+  letter-spacing: normal !important;
+}

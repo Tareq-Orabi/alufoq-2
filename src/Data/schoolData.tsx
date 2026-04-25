@@ -6,6 +6,7 @@ import image6 from '../assets/image6.jpg';
 import image7 from '../assets/image7.jpg';
 import image8 from '../assets/image8.jpg';
 import image9 from '../assets/image9.jpg';
+import image15 from '../assets/image15.jpg';
 
 
 export type { NewsItem, SchoolEvent, NewsArticle };
@@ -13,49 +14,49 @@ export type { NewsItem, SchoolEvent, NewsArticle };
 export const EVENTS_DATA: SchoolEvent[] = [
     {
         id: 1,
-        day: "10",
-        month: "April",
-        monthAr: "أبريل",
+        day: "25",
+        month: "February",
+        monthAr: "فبراير",
         title: "Signing of a cooperation agreement between Volt Academy for Training and Al-Ufuq Kindergarten and Secondary Schools",
         titleAr: "توقيع اتفاقية تعاون بين أكاديمية فولت للتدريب و روضة ومدارس الأفق الثانوية لاستكمال برنامج التعليم الثانوي البريطاني ( BTEC )",
         excerpt: "Our School celebrating National Parent Involvement Day on April 10.",
-        location: "Amman, Jordan, salaam street",
-        locationAr: "عمان، الأردن، شارع السلام",
+        location: " Na'ur area, Amman",
+        locationAr: " مدارس الأفق الثانوية",
         time: "All day",
-        fullDateRange: "April 10, 2026",
+        fullDateRange: "February 25, 2026",
         image: image
     },
     {
         id: 2,
-        day: "8",
-        month: "April",
-        monthAr: "أبريل",
+        day: "10",
+        month: "March",
+        monthAr: "مارس",
         title: "As part of the school’s plan to guide students in choosing their paths, the school administration, faculty, and students visited the Volt Training Academy to view the engineering workshops specializing in automotive mechanics and to provide a comprehensive and clear explanation of the technical path (BTEC).",
         titleAr: `ضمن خطه المدرسه في توجيه الطلاب لاختيار مساراتهم ، كان لاداره المدرسه والهيئة  التدريسيه  والطلاب  زياره لاكاديميه فولت للتدريب ؛ وذلك للاطلاع على المشاغل الهندسيه الخاصه بميكانيك السيارات وتقديم شرح وافي وواضح عن المسار التقني (BTEC).`,
         excerpt: "Year 6 pupils are invited to join us for a Taster Day on either Thursday 19th or Sunday 22nd.",
-        location: "Amman, Jordan, salaam street",
-        locationAr: "عمان، الأردن، شارع السلام",
+        location: " Amman",
+        locationAr: " Volt Training Academy",
         time: "All day",
-        fullDateRange: "April 8, 2026",
+        fullDateRange: "March 10, 2026",
         image: image2
     },
     {
         id: 3,
-        day: "7",
-        month: "April",
-        monthAr: "أبريل",
+        day: "24",
+        month: "March",
+        monthAr: "مارس",
         title: "BTEC Interactive Learning Session — Bridging Theory and Practice",
         titleAr: "جلسة تعليمية تفاعلية BTEC — ربط النظرية بالتطبيق العملي",
         excerpt: "Students engage in hands-on learning paths within an interactive environment that simulates real-world work settings.",
         location: "Al-Ufuq Secondary School",
         locationAr: "مدارس الأفق الثانوية",
         time: "All day",
-        fullDateRange: "April 7, 2026",
+        fullDateRange: "March 24, 2026",
         image: image5
     },
     {
         id: 4,
-        day: "14",
+        day: "1",
         month: "April",
         monthAr: "أبريل",
         title: "Introductory Session on the BTEC Program at the German Jordanian University",
@@ -64,12 +65,12 @@ export const EVENTS_DATA: SchoolEvent[] = [
         location: "German Jordanian University",
         locationAr: "الجامعة الألمانية الأردنية",
         time: "All day",
-        fullDateRange: "April 14, 2026",
+        fullDateRange: "April 1, 2026",
         image: image6
     },
     {
         id: 5,
-        day: "12",
+        day: "10",
         month: "April",
         monthAr: "أبريل",
         title: "Educational Visit to Futeric for IT Students",
@@ -78,12 +79,12 @@ export const EVENTS_DATA: SchoolEvent[] = [
         location: "Futeric",
         locationAr: "Futeric",
         time: "All day",
-        fullDateRange: "April 12, 2026",
+        fullDateRange: "April 10, 2026",
         image: image7
     },
     {
         id: 6,
-        day: "9",
+        day: "15",
         month: "April",
         monthAr: "أبريل",
         title: "Al-Ufuq Secondary School Students Apply Their Practical Skills in a Specialized Technical Workshop",
@@ -107,12 +108,12 @@ The school administration emphasized that these initiatives are part of preparin
         location: "Al-Ufuq Secondary School",
         locationAr: "مدارس الأفق الثانوية",
         time: "All day",
-        fullDateRange: "April 9, 2026",
+        fullDateRange: "April 15, 2026",
         image: image8
     },
     {
         id: 7,
-        day: "6",
+        day: "20",
         month: "April",
         monthAr: "أبريل",
         title: "Al-Ufuq Secondary School Students Participate in Arduino Training",
@@ -139,6 +140,23 @@ The school administration emphasized that Arduino training is a crucial step in 
         fullDateRange: "April 6, 2026",
         image: image9
     },
+    
+    {
+    id: 8,
+    day: "25",
+    month: "April",
+    monthAr: "أبريل",
+    title: "BTEC Open Day at Al-Ufuq Schools",
+    titleAr: "اليوم المفتوح (BTEC) في مدارس الأفق",
+    excerpt: "Join our open day to explore the BTEC system, understand study and assessment methods, and تجربه ورشات تفاعلية للطلاب.",
+    description: "تدعوكم مدارس الأفق التربوي لحضور اليوم المفتوح لبرنامج BTEC، وذلك يوم السبت الموافق 25/4.\n\nيهدف هذا اليوم إلى تعريف أولياء الأمور بنظام BTEC بشكل عملي وواضح، من خلال شرح آلية الدراسة، نظام التقييم، والمسارات التعليمية المتاحة، مع الإجابة على جميع الاستفسارات بكل شفافية.\n\nكما يتضمن اليوم مجموعة من التجارب العملية وورشات تدريبية تفاعلية مخصصة للطلاب، تتيح لهم فرصة حقيقية لاستكشاف التخصصات المختلفة، وتطبيق المهارات بأنفسهم ضمن بيئة تعليمية حديثة ومحفزة.\n\nبانتظاركم لتعيشوا التجربة معنا وتكتشفوا مستقبل التعليم التطبيقي.",
+    location: "Al-Ufuq Secondary School",
+    locationAr: "مدارس الأفق الثانوية",
+    time: "—",
+    fullDateRange: "April 25, 2026",
+    image: image15
+}
+    
 
 ];
 

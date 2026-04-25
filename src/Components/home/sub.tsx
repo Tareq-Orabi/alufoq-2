@@ -53,7 +53,7 @@ export const Sub = () => {
     ];
 
     return (
-        <section className="relative w-full min-h-screen overflow-hidden bg-slate-50 px-6 py-24">
+       <section className="relative w-full overflow-hidden bg-slate-50 px-6 py-16">
             {/* Global Ambient Background */}
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-indigo-100/40 via-transparent to-transparent" />
 

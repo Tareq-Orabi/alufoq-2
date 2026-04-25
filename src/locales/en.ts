@@ -19,7 +19,7 @@ export const en: Translations = {
     school: 'Our School',
     statsHtml: {
       studentsCount: '500 students',
-      facultyCount: '50 expert faculty',
+      facultyCount: '30 expert faculty',
       pre: 'We are home to ',
       mid: ' and ',
       post: ' members.',
@@ -36,9 +36,18 @@ export const en: Translations = {
     title: 'Academic Calendar',
     download: 'Download Full Calendar (PDF) →',
     months: {
-      September: 'September',
-      November: 'November',
+      January: 'January',
+      February: 'February',
+      March: 'March',
+      April: 'April',
+      May: 'May',
       June: 'June',
+      July: 'July',
+      August: 'August',
+      September: 'September',
+      October: 'October',
+      November: 'November',
+      December: 'December',
     },
   },
   stats: {
@@ -46,8 +55,8 @@ export const en: Translations = {
     title: 'School Statistics',
     desc: 'Here you can review some key statistics reflecting the success and dedication of our Al-Ufoq community.',
     cards: [
-      { label: 'Certified Expert Teachers', value: '67' },
-      { label: 'Active Students Enrolled', value: '5,673' },
+      { label: 'Certified Expert Teachers', value: '30' },
+      { label: 'Active Students Enrolled', value: '400' },
       { label: 'Passing to Universities', value: '97%' },
       { label: 'Satisfied & Supportive Parents', value: '100%' },
     ],
@@ -107,7 +116,7 @@ export const en: Translations = {
     },
     contacts: {
       title: 'Contacts',
-      address: ' Naour area, Amman, Jordan',
+      address: " Na'ur area, Amman",
       hours: 'Sun — Thu: 7AM — 4PM',
     },
     posts: {
@@ -120,7 +129,7 @@ export const en: Translations = {
     },
     location: {
       title: 'Location',
-      mapText: 'Interactive Map (Naour area, Amman)',
+      mapText: "Interactive Map (VR7G+GQ2, Na'ur area)",
     },
     copyright: {
       text: 'Copyright © Al-Ufoq School',

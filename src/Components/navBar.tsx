@@ -12,10 +12,6 @@ interface NavbarProps {
 type NavPage = 'home' | 'about' | 'events' | 'news';
 const NAV_PAGES: NavPage[] = ['home', 'about', 'events', 'news'];
 
-/**
- * Navbar — reads lang from context, uses typed translations for labels.
- * No `t(string)` with runtime key lookups; all labels are typed properties.
- */
 export const Navbar: React.FC<NavbarProps> = ({ setCurrentPage, currentPage }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -24,7 +20,6 @@ export const Navbar: React.FC<NavbarProps> = ({ setCurrentPage, currentPage }) =
   const t = translations[lang];
   const isAr = lang === 'ar';
 
-  /** Typed map from page key → translated label */
   const navLabels: Record<NavPage, string> = {
     home: t.nav.home,
     about: t.nav.about,
@@ -53,46 +48,49 @@ export const Navbar: React.FC<NavbarProps> = ({ setCurrentPage, currentPage }) =
   return (
     <nav
       dir={isAr ? 'rtl' : 'ltr'}
-      className={`sticky top-0 z-50 transition-all duration-500 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-xl py-2' : 'bg-white py-4'
-        } border-b-4 border-school-red`}
+      className={`sticky top-0 z-50 transition-all duration-500 ${
+        scrolled 
+          ? 'bg-white/85 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] py-3' 
+          : 'bg-re py-5'
+        } border-b border-slate-100/50`}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
 
         {/* Logo */}
-        <button onClick={() => handleNavClick('home')} className="flex items-center gap-4 group" aria-label="Go to home">
+        <button onClick={() => handleNavClick('home')} className="flex items-center gap-4 group focus:outline-none" aria-label="Go to home">
           <div className="relative">
+            <div className="absolute inset-0 bg-school-red/10 rounded-full blur-xl scale-150 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <img
               src={schoolLogo}
               alt="Al-Ufoq School Logo"
-              className="w-12 h-12 md:w-14 md:h-14 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6"
+              className="relative w-12 h-12 md:w-14 md:h-14 transition-all duration-500 group-hover:scale-105 group-hover:-rotate-3 drop-shadow-sm"
               loading="lazy"
             />
           </div>
           <div className="flex flex-col items-start leading-none">
-            <span className="text-2xl md:text-3xl font-black text-slate-950 tracking-tighter italic uppercase">
-              <span className="text-school-red">{isAr ? 'الأفق' : 'ALUFOQ'}</span>
+            <span className="text-2xl md:text-3xl font-black text-slate-900 tracking-tighter italic uppercase">
+              <span className="text-school-red">{isAr ? 'الأفق' : 'ALUFOQSCHOOL'}</span>
             </span>
-            <span className="text-base font-extrabold text-black uppercase tracking-[0.1em]">
+            <span className="text-base font-extrabold text-slate-700 uppercase tracking-[0.1em] mt-0.5">
               {isAr ? 'مدرسة وروضة' : 'School & KG'}
             </span>
           </div>
         </button>
 
         {/* Desktop menu */}
-        <div className="hidden md:flex items-center gap-10">
-          <div className="flex gap-8 md:gap-10">
+        <div className="hidden md:flex items-center gap-8 lg:gap-10">
+          <div className="flex bg-slate-50/80 p-1.5 rounded-2xl border border-slate-100">
             {NAV_PAGES.map((page) => (
               <button
                 key={page}
                 onClick={() => handleNavClick(page)}
-                className={`text-xs font-black uppercase tracking-[0.2em] transition-all relative py-2 group ${currentPage === page ? 'text-school-red' : 'text-slate-600 hover:text-school-red'
+                className={`text-xs font-black uppercase tracking-[0.2em] transition-all duration-300 px-5 py-2.5 rounded-xl ${
+                  currentPage === page 
+                    ? 'bg-school-red text-school-white shadow-sm' 
+                    : 'text-slate-500 hover:text-slate-900 hover:bg-slate-100/50'
                   }`}
               >
                 {navLabels[page]}
-                <span
-                  className={`absolute bottom-0 left-0 h-0.5 bg-school-red transition-all duration-300 ${currentPage === page ? 'w-full' : 'w-0 group-hover:w-full'
-                    }`}
-                />
               </button>
             ))}
           </div>
@@ -101,10 +99,10 @@ export const Navbar: React.FC<NavbarProps> = ({ setCurrentPage, currentPage }) =
           <button
             onClick={toggleLanguage}
             aria-label={`Switch to ${t.nav.langSwitch}`}
-            className="flex items-center gap-3 bg-slate-950 text-white px-5 py-2.5 rounded-xl hover:bg-school-red transition-all active:scale-95 shadow-lg shadow-slate-200"
+            className="flex items-center gap-2.5 bg-slate-900 text-white px-5 py-2.5 rounded-2xl hover:bg-school-red hover:shadow-lg hover:shadow-school-red/20 transition-all duration-300 active:scale-95"
           >
-            <IconGlobe className="w-4 h-4 text-school-red" />
-            <span className="text-[10px] font-black uppercase tracking-widest">
+            <IconGlobe className="w-4 h-4 opacity-90" />
+            <span className="text-[10px] font-black uppercase tracking-widest pt-0.5">
               {t.nav.langSwitch}
             </span>
           </button>
@@ -115,14 +113,16 @@ export const Navbar: React.FC<NavbarProps> = ({ setCurrentPage, currentPage }) =
           <button
             onClick={toggleLanguage}
             aria-label={`Switch to ${t.nav.langSwitch}`}
-            className="w-10 h-10 flex items-center justify-center font-black text-[10px] text-slate-950 border-2 border-slate-100 rounded-xl"
+            className="w-11 h-11 flex items-center justify-center font-black text-[10px] text-slate-700 bg-slate-50 hover:bg-slate-100 transition-colors rounded-2xl border border-slate-100"
           >
             {isAr ? 'EN' : 'AR'}
           </button>
           <button
             aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
             aria-expanded={isOpen}
-            className="w-10 h-10 flex items-center justify-center text-school-red bg-slate-50 rounded-xl"
+            className={`w-11 h-11 flex items-center justify-center rounded-2xl transition-all duration-300 ${
+              isOpen ? 'bg-school-red text-white shadow-lg shadow-school-red/30' : 'bg-slate-50 text-school-red hover:bg-slate-100 border border-slate-100'
+            }`}
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <IconClose className="w-6 h-6" /> : <IconMenu className="w-6 h-6" />}
@@ -132,29 +132,35 @@ export const Navbar: React.FC<NavbarProps> = ({ setCurrentPage, currentPage }) =
 
       {/* Mobile overlay menu */}
       <div
-        className={`fixed inset-0 top-[76px] bg-slate-950 z-40 md:hidden transition-all duration-500 transform ${isOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'
+        className={`fixed inset-0 top-[76px] bg-slate-900/95 backdrop-blur-xl z-40 md:hidden transition-all duration-500 ease-in-out transform ${
+          isOpen ? 'translate-y-0 opacity-100' : '-translate-y-8 opacity-0 pointer-events-none'
           }`}
         aria-hidden={!isOpen}
       >
-        <div className="p-10 space-y-6">
-          {NAV_PAGES.map((page, i) => (
-            <button
-              key={page}
-              onClick={() => handleNavClick(page)}
-              style={{ transitionDelay: `${i * 100}ms` }}
-              className={`block text-5xl font-black uppercase italic w-full text-left rtl:text-right transition-all ${currentPage === page ? 'text-school-red translate-x-4 rtl:-translate-x-4' : 'text-white/20'
-                }`}
-            >
-              {navLabels[page]}
-            </button>
-          ))}
+        <div className="flex flex-col h-full p-8 overflow-y-auto">
+          <div className="flex-1 space-y-4 pt-4">
+            {NAV_PAGES.map((page, i) => (
+              <button
+                key={page}
+                onClick={() => handleNavClick(page)}
+                style={{ transitionDelay: `${i * 75}ms` }}
+                className={`block text-5xl font-black uppercase italic w-full text-left rtl:text-right transition-all duration-500 rounded-2xl p-4 ${
+                  currentPage === page 
+                    ? 'text-school-red bg-white/5 translate-x-2 rtl:-translate-x-2' 
+                    : 'text-white/40 hover:text-white/80 hover:bg-white/5'
+                  }`}
+              >
+                {navLabels[page]}
+              </button>
+            ))}
+          </div>
 
-          <div className="pt-10 mt-10 border-t border-white/5 space-y-4">
-            <p className="text-slate-500 text-[10px] font-black uppercase tracking-[0.3em] mb-2">
+          <div className="pt-8 mt-8 border-t border-white/10 pb-12">
+            <p className="text-slate-400 text-[10px] font-black uppercase tracking-[0.3em] mb-3">
               {t.nav.getInTouch}
             </p>
-            <p className="text-xl font-bold text-white tabular-nums" dir="ltr">+962 77091 7917</p>
-            <p className="text-lg text-school-red font-medium">info@alufoq.com</p>
+            <p className="text-xl font-bold text-white tabular-nums tracking-wide mb-1" dir="ltr">+962 77091 7917</p>
+            <p className="text-lg text-school-red font-medium">info@alufoqschool.com</p>
           </div>
         </div>
       </div>
